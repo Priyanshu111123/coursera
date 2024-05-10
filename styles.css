@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em; /* 75% larger */
+}
+
+section {
+    border: 1px solid black;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.dish {
+    padding: 20px;
+    min-height: 150px; /* Adjust height as needed */
+    padding-top: 40px; /* Add padding to move text down */
+}
+
+.dish h2 {
+    font-size: 1.25em; /* 25% larger */
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+    .dish {
+        width: 33.33%;
+        float: left;
+    }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 991px) {
+    .dish {
+        width: 50%;
+        float: left;
+    }
+
+    .sushi {
+        clear: both;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .dish {
+        width: 100%;
+    }
+}
+
+/* Section Title Region */
+.dish h2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Unique color */
+    color: white; /* Change text color for readability */
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.chicken h2 {
+    background-color: #FF5733; /* Color for chicken section */
+}
+
+.beef h2 {
+    background-color: #A9A9A9; /* Color for beef section */
+}
+
+.sushi h2 {
+    background-color: #3366FF; /* Color for sushi section */
+}
